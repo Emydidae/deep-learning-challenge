@@ -24,7 +24,8 @@ This analysis will explore the process of creating a sequential neural network m
   - Columns that had no relation to the success (not listed as relevant features) were dropped.
   - The number of nodes in the first layer were about double the number of inputs, with fewer nodes in the second hidden layer.
   - Activation functions were the usual ones we've used for classification thus far (ReLU and Sigmoid).
-- This version of the model achieved a 72.4% accuracy on the test data, about 2.6% below the target.![](/analysis_images/m1_accuracy.png) In attempts to improve it, multiple routes were taken to try to improve it:
+- This version of the model achieved a 72.4% accuracy on the test data, about 2.6% below the target.![](/analysis_images/m1_accuracy.png)
+- In attempts to reach the 75% goal, multiple routes were taken to try to improve it:
   - Binning a little less aggressively on classifications
   - Reducing unnecessary columns (like changing the Special Considerations column to be 1/0, instead of 2 binary columns, one for yes & one for no)
   - Binning income brackets more aggressively based on how common they were ![](/analysis_images/m2_income.png)
