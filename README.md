@@ -20,22 +20,27 @@ This analysis will explore the process of creating a sequential neural network m
 ### Compiling, Training, and Evaluating the Model
 - To begin with, the neural network was built to the base standards.
   - Categorical data was changed to dummy columns with binary numerical values.
-  - Categorical columns with more than 10 unique values were binned to group together rare cases.![](/analysis_images/m1_bin.png)
+  - Categorical columns with more than 10 unique values were binned to group together rare cases.
+![](/analysis_images/m1_bin.png)
   - Columns that had no relation to the success (not listed as relevant features) were dropped.
   - The number of nodes in the first layer were about double the number of inputs, with fewer nodes in the second hidden layer.
   - Activation functions were the usual ones we've used for classification thus far (ReLU and Sigmoid).
-- This version of the model achieved a 72.4% accuracy on the test data, about 2.6% below the target.![](/analysis_images/m1_accuracy.png)
+- This version of the model achieved a 72.4% accuracy on the test data, about 2.6% below the target.
+![](/analysis_images/m1_accuracy.png)
 - In attempts to reach the 75% goal, multiple routes were taken to try to improve it:
   - Binning a little less aggressively on classifications
   - Reducing unnecessary columns (like changing the Special Considerations column to be 1/0, instead of 2 binary columns, one for yes & one for no)
-  - Binning income brackets more aggressively based on how common they were ![](/analysis_images/m2_income.png)
-  - Binning some values of affiliation that seemed related ![](analysis_images/m2_affil.png)
+  - Binning income brackets more aggressively based on how common they were
+![](/analysis_images/m2_income.png)
+  - Binning some values of affiliation that seemed related
+![](analysis_images/m2_affil.png)
   - Increasing nodes and epochs
 - Other things attempted that had no (or negative) effects:
   - Dropping the Special Considerations and Status columns, which are almost exclusively one value (seem to basically cover outliers)
   - Binning more columns, such as less common use-cases or organizations
   - Adding an extra hidden layer
-- Ultimately, this did not lead to an increase in accuracy, never breaking the 72.4% on test data ![](/analysis_images/m2_accuracy.png)
+- Ultimately, this did not lead to an increase in accuracy, never breaking the 72.4% on test data
+![](/analysis_images/m2_accuracy.png)
 ## Summary
 Overall, I wasn't able to meet the 75% expected. Given time to test more iterations of the model, I'd be interested to try other activation functions, and even other neural network models. While it was easy to think "oh, this small amount of data isn't important, it's just distracting the model," almost every time I grouped or removed data that seemed like outliers or similar enough groups to me, it had little effect in improving accuracy or efficiency, often hurting the prior more than helping. I'd be interested to see how a tree-based machine learning model would approach the problem, if only to see what variables it considered most important, as I struggled to find a specific data point that was helping or hurting the result.
 
