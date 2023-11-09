@@ -50,6 +50,7 @@ This analysis will explore the process of creating a sequential neural network m
 Overall, I wasn't able to meet the 75% expected. Given time to test more iterations of the model, I'd be interested to try other activation functions, and even other neural network models. While it was easy to think "oh, this small amount of data isn't important, it's just distracting the model," almost every time I grouped or removed data that seemed like outliers or similar enough groups to me, it had little effect in improving accuracy or efficiency, often hurting the prior more than helping. I'd be interested to see how a tree-based machine learning model would approach the problem, if only to see what variables it considered most important, as I struggled to find a specific data point that was helping or hurting the result.
 
 Another trend I found was that increasing the nodes / hidden layers / epochs didn't seem to have much of any impact on the model. In all the various attempts at improving it, the model always stagnated about 50 epochs in, never quite improving past 74.2% accuracy on the training data. This is largely why I think an entirely different model would be an interesting route to explore, even if it is less accurate, to try to explore what changes could improve the odds. (Pictured below are the original model at 50 and 100 epochs, as well as the "optimized" model at 50 and 120 epochs)
+
 ![](/analysis_images/m1_epochs_1.png)
 ![](/analysis_images/m1_epochs_2.png)
 ![](/analysis_images/m2_epochs_1.png)
